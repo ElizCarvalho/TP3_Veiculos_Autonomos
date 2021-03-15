@@ -30,7 +30,7 @@ $ catkin_make
 
 ```shell
 $ initros1
-$ source ~/aula/catkin_ws/devel/setup.bash
+$ source ~/catkin_ws/devel/setup.bash
 $ cd ~/catkin_ws/src/cv_coord_centroid/src/
 $ gedit ec_publisher_static_image.py
 $ chmod +x ec_publisher_static_image.py
@@ -43,7 +43,8 @@ $ rosrun cv_coord_centroid ec_publisher_static_image.py
 #### % Etapa 3: Utilizar o calibrador (código cedido pelo professor) para exrair os valores a serem utilizados para criação da máscara (binarização da imagem)
 ```shell
 $ initros1
-$ source ~/aula/catkin_ws/devel/setup.bash
+$ source ~/catkin_ws/devel/setup.bash
+$ rosrun cv_coord_centroid calibrador_hsv_yaml_ROS.py
 ```
 [calibrador_hsv_yaml_ROS.py](https://github.com/ElizCarvalho/TP3_Veiculos_Autonomos/blob/main/cv_coord_centroid/src/calibrador_hsv_yaml_ROS.py)
 
@@ -61,6 +62,8 @@ $ source ~/aula/catkin_ws/devel/setup.bash
 #####	4.4- Extrair a centróide e pegar sua coordenada
 #####	4.5- Publicar msg do tipo Pose2D com a coordenada no tópico /goal
 ```shell
+$ initros1
+$ source ~/catkin_ws/devel/setup.bash
 $ cd ~/catkin_ws/src/cv_coord_centroid/src
 $ gedit coord_centroid_ecarvalho_DR4_TP3.py
 $ chmod +x coord_centroid_ecarvalho_DR4_TP3.py
@@ -71,7 +74,6 @@ $ rosrun cv_coord_centroid ec_coord_centroid.py
 [ec_coord_centroid.py](https://github.com/ElizCarvalho/TP3_Veiculos_Autonomos/blob/main/cv_coord_centroid/src/ec_coord_centroid.py)
 
 #### Evidências:
-
 <img src="https://github.com/ElizCarvalho/TP3_Veiculos_Autonomos/blob/main/cv_coord_centroid/prints/evidencia_mascara_img2.png" width=600/>
 <img src="https://github.com/ElizCarvalho/TP3_Veiculos_Autonomos/blob/main/cv_coord_centroid/prints/baundbox-com-centroid_img1.png" width=600/>
 <img src="https://github.com/ElizCarvalho/TP3_Veiculos_Autonomos/blob/main/cv_coord_centroid/prints/baundbox-com-centroid_img2.png" width=600/>
